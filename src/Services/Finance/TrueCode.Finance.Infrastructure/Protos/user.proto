@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+option csharp_namespace = "TrueCode.User.API.Grpc";
+
+package user;
+
+// Сервис для работы с пользователями
+service UserService {
+  // Получить информацию о пользователе по ID
+  rpc GetUser (GetUserRequest) returns (GetUserResponse);
+  // Проверить валидность JWT токена
+  rpc ValidateToken (ValidateTokenRequest) returns (ValidateTokenResponse);
+}
+
+// Запрос для получения пользователя
+message GetUserRequest {
+  string user_id = 1;
+}
+
+// Ответ с информацией о пользователе
+message GetUserResponse {
+  bool success = 1;
+  string message = 2;
+  UserInfo user = 3;
+}
+
+// Информация о пользователе
+message UserInfo {
+  string id = 1;
+  string name = 2;
+  repeated string favorite_currencies = 3;
+  string created_at = 4;
+  string updated_at = 5;
+}
+
+// Запрос для валидации токена
+message ValidateTokenRequest {
+  string token = 1;
+}
+
+// Ответ валидации токена
+message ValidateTokenResponse {
+  bool is_valid = 1;
+  string user_id = 2;
+  string user_name = 3;
+  string message = 4;
+}

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-TrueCode.CurrencyUpdater-d8a700e5-a497-437a-b32b-2217e474031b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.5" />
+    <PackageReference Include="System.Xml.XDocument" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Finance\TrueCode.Finance.Application\TrueCode.Finance.Application.csproj" />
+    <ProjectReference Include="..\..\Finance\TrueCode.Finance.Infrastructure\TrueCode.Finance.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

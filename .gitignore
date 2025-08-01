@@ -1,0 +1,52 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio files
+*.user
+*.suo
+*.cache
+*.docstates
+*.sln.docstates
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Entity Framework
+**/Migrations/*Designer.cs
+**/Migrations/*ModelSnapshot.cs
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vs/
+.vscode/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+
+# ASP.NET Core
+appsettings.Development.json
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# JetBrains Rider
+.idea/

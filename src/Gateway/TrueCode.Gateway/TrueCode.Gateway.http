@@ -1,0 +1,6 @@
+@TrueCode.Gateway_HostAddress = http://localhost:5033
+
+GET {{TrueCode.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
